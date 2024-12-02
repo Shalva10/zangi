@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}   
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Poppins", serif;
+
+    animation-name: body-animation;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes body-animation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+h3 {
+    color: white;
+}
+
+.header {
+    max-width: 30000px;
+    height: 110px;
+    background-color: black;
+    margin: 0 auto;
+}
+
+.header-container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header-inner {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    font-size: 30px;
+}
+
+.navigation-list {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.navigation-list li a {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: .3s;
+}
+
+.navigation-list li a:hover {
+    border-radius: 3px;
+    background-color: white;
+    color: black;
+}
+
+.navigation-list li button {
+    border-radius: 20px;
+    border: none;
+    background-color: white;
+    color: black;
+    width: 200px;
+    height: 40px;
+    transition: .3s;
+}
+
+.navigation-list li button:hover {
+    width: 220px;
+    height: 48px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    font-size: 18px;
+}
+
+
+.burger-menu {
+    display: none;
+    position: relative;
+}
+
+.burger-menu button {
+    width: 40px;
+    font-size: 25px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+.burger-menu input {
+    position: absolute;
+    right: 0 !important;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.burger {
+    display: none;
+    position: absolute;
+    background-color: #000;
+    border-radius: 20px;
+    padding: 0;
+    color: #fff;
+    left: -68px;
+    top: 33px;
+    height: 0;
+    width: 100px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.burger ul li a {
+    color: #fff;
+}
+.burger ul li + li  {
+    margin-top: 10px;
+}
+
+.burger-menu input:checked ~ .burger {
+    display: block;
+    height: 150px;
+}
+
+                           
+
+
+
+
+
+
+
+.container {
+    max-width: 1470px;
+    height: 100%;
+    padding: 0 15px;        
+    margin: 0 auto;
+}
+
+
+.services-inner {
+
+
+    h2 {
+        font-size: 50px;
+        font-weight: bold;
+        color: black;
+        letter-spacing: -4%;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .services-text {
+        max-width: 478px;
+        text-align: center;
+        margin: 0 auto;
+        color: black;
+        font-weight: medium;
+        line-height: 24px;
+    }
+
+    .services-cards {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+
+        .services-card {
+            max-width: 334px;
+            height: 353px;
+            border: 0px solid black;
+            padding: 16px;
+            background-color: black;
+            border-radius: 10px;
+            
+            .product-img {
+                width: 302px;
+                height: 176px;
+            }
+
+            img:nth-child(1) {
+                width: 100%;
+            }
+
+            .services-card-stars {
+                margin: 10px 0;
+            }
+
+            .services-card-description {
+                color: white;
+                font-size: 17px;
+                font-weight: 600;
+                margin: 5px 0;
+            }
+
+            .services-card-price {
+                font-size: 24px;
+                color: white;
+                font-weight: 800;   
+            }
+        }
+    }
+
+
+
+}
+
+
+@media (max-width: 768px) {
+
+    .header-navigation .navigation-list {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .burger {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+}               
